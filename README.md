@@ -53,12 +53,17 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - Join PIZZAS with PIZZA_TYPES to get the pizza name.
 - Sort prices in descending order (ORDER BY P.PRICE DESC).
 - LIMIT 1 returns the most expensive pizza with:Name,Size,Price.
-  
 
-
-➤ **Insight**:
+- 
+➤ **Insight**:The most commonly ordered pizza size reflects customer preference and demand patterns, helping the business understand which portion size is most popular.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/4.png)
-➤ **Explanation**:
+➤ **Explanation**:This query identifies the most frequently ordered pizza size.
+- JOIN → connects order details with pizza info to get size.
+- GROUP BY P.SIZE → groups orders by each pizza size.
+- COUNT(*) → counts how many times each size was ordered.
+- ORDER BY TOTAL_ORDERS DESC → sorts sizes from most to least ordered.
+- LIMIT 1 → returns the top (most ordered) size.
+It counts orders for each size and returns the size with the highest demand.
 
 ➤ **Insight**:
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/5.png)
