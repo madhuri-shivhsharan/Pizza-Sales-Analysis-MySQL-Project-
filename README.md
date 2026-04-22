@@ -78,35 +78,84 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - LIMIT 5 → returns top 5 pizza types.
 - It finds which pizzas are sold the most in terms of total quantity.
 
-➤ **Insight**:
+➤ **Insight**:The category-wise quantity analysis highlights which pizza segments are most popular among customers, providing a clear view of demand distribution across categories.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/6.png)
-➤ **Explanation**:
+➤ **Explanation**:This query calculates the total quantity of pizzas ordered for each category.
+- ORDER_DETAILS → contains quantity of pizzas ordered.
+- PIZZAS → connects each order to a pizza type.
+- PIZZA_TYPES → provides category (e.g., Classic, Veggie, Chicken, etc.)
+- JOIN → merges all tables to get category-level data.
+- SUM(OD.QUANTITY) → calculates total pizzas sold per category.
+- GROUP BY PT.CATEGORY → groups results by category
+- ORDER BY TOTAL_QUANTITY DESC → ranks categories from highest to lowest demand.
+- It shows which category of pizzas is ordered the most.
 
-➤ **Insight**:
+➤ **Insight**:The hourly distribution of orders reveals peak and off-peak business hours, helping to understand customer ordering patterns throughout the day.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/7.png)
-➤ **Explanation**:
+➤ **Explanation**:This query analyzes how orders are distributed across different hours of the day.
+- HOUR(TIME) → extracts the hour (0–23) from the order time.
+- COUNT(ORDER_ID) → counts number of orders in each hour.
+- GROUP BY ORDER_HOUR → groups orders by each hour.
+- ORDER BY ORDER_HOUR → displays results in chronological order.
+- It shows how many orders are placed in each hour of the day.
 
-➤ **Insight**:
+
+
+➤ **Insight**:The category-wise distribution highlights how the menu is structured across different pizza segments, showing which categories have the highest variety.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/8.png)
-➤ **Explanation**:
+➤ **Explanation**:This query calculates the number of pizza variants available in each category.
+- PIZZAS → contains individual pizza entries (size variations, etc.)
+- PIZZA_TYPES → contains category information (Classic, Veggie, Chicken, etc.)
+- JOIN → connects pizzas with their categories.
+- COUNT(P.PIZZA_ID) → counts how many pizzas belong to each category.
+- GROUP BY PT.CATEGORY → groups results by category.
+- ORDER BY TOTAL_PIZZAS DESC → ranks categories by number of pizzas.
+- It shows how many different pizzas are offered in each category.
 
-➤ **Insight**:
+➤ **Insight**:The average number of pizzas ordered per day provides a baseline measure of daily sales volume, helping to understand overall business performance.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/9.png)
-➤ **Explanation**:
+➤ **Explanation**:This query calculates the average number of pizzas ordered per day using a subquery.
+**Step 1: Inner Query (Subquery)**
+- Joins ORDERS and ORDER_DETAILS.
+- Groups data by DATE.
+- Calculates total pizzas ordered each day using SUM(OD.QUANTITY.
+ **Result: Daily total pizzas → DAILY_PIZZAS**
+**Step 2: Outer Query**
+- Applies AVG() on daily totals.
+- Returns the average pizzas ordered per day.
+- First calculate pizzas ordered each day, then take the average of those daily totals.
+  
 
-➤ **Insight**:
+➤ **Insight**:The top 3 pizza types by revenue highlight the highest earning products, combining both popularity and pricing impact.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/10.png)
-➤ **Explanation**:
+➤ **Explanation**:This query identifies the top 3 pizza types that generate the highest revenue.
+- ORDER_DETAILS → contains quantity ordered.
+- PIZZAS → contains price of each pizza.
+- PIZZA_TYPES → contains pizza names.
+- JOIN → combines all tables to link quantity, price, and name.
+- OD.QUANTITY * P.PRICE → calculates revenue per order line.
+- SUM(...) → total revenue per pizza type.
+- ROUND(...,2) → formats revenue to 2 decimal places.
+- GROUP BY PT.NAME → groups data by pizza type.
+- ORDER BY TOTAL_REVENUE DESC → ranks highest earning pizzas.
+- LIMIT 3 → returns top 3.
+- It finds which pizzas make the most money, not just the most orders.
 
-➤ **Insight**:
+➤ **Insight**:This analysis highlights the contribution of each pizza type to total revenue, helping identify top-performing products that drive business income.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/11.png)
-➤ **Explanation**:
+➤ **Explanation**:This query calculates both revenue and its percentage contribution for each pizza type.
+- OD.QUANTITY * P.PRICE → revenue generated per order.
+- SUM(...) → total revenue for each pizza type.
+- Subquery → calculates overall total revenue of all pizzas.
+- Division → (pizza revenue / total revenue).
+- * 100 → converts into percentage contribution.
+- ROUND(...,2) → formats values to 2 decimal places.
+- GROUP BY PT.NAME → groups data by pizza type.
+- ORDER BY PERCENTAGE_CONTRIBUTION DESC → ranks pizzas from highest to lowest contributors.
+- It shows how much money each pizza earns and what share it contributes to total revenue.
 
 
 ## 🚀 Conclusion
 I found that revenue is highly concentrated in a few pizza types. Medium and large pizzas dominate sales, and evening hours are peak order times. Also, top 3 pizzas in each category generate most revenue, which suggests focusing on high-performing items can significantly improve business outcomes.
 
----
 
-## 🔗 Author
-**Your Name**
