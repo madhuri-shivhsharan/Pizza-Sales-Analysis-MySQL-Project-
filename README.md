@@ -16,14 +16,12 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - In Pizzas table contains Pizza_id,Pizza_type_id,Size,Price.
 - In Pizzas_types table conatins Pizza_type_id,Name,Category,Ingredients.
 ## 📊 Key Analysis Performed
-
 ### 🔹 Basic Analysis
 - Total number of orders placed
 - Total revenue generated
 - Highest priced pizza
 - Most common pizza size
 - Top 5 most ordered pizzas
-
 ### 🔹 Intermediate Analysis
 - Category-wise sales distribution
 - Orders distribution by hour
