@@ -30,12 +30,19 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 ➤ **Insight**:The total order count highlights customer purchasing activity and can be used to identify business growth patterns when analyzed over time. It also helps in correlating order volume with revenue and operational capacity.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/1.png)
 ➤ **Explanation**:This query counts the total number of orders recorded in the ORDERS table using ORDER_ID.
-- COUNT(ORDER_ID) counts all non-null order IDs
-- Since each ORDER_ID represents one order, the result gives the total orders placed
+- COUNT(ORDER_ID) counts all non-null order IDs.
+- Since each ORDER_ID represents one order, the result gives the total orders placed.
 
-➤ **Insight**:
+  
+➤ **Insight**:The total revenue metric reflects the overall financial performance of pizza sales by combining order volume with pricing. It provides a clear view of how much income the business generates from its core product offerings.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/2.png)
-➤ **Explanation**:
+➤ **Explanation**:This query calculates the total revenue generated from pizza sales.
+- ORDER_DETAILS (OD) → contains quantity of pizzas ordered.
+- PIZZAS (P) → contains price of each pizza.
+- JOIN → connects both tables using PIZZA_ID to match quantity with price.
+- OD.QUANTITY * P.PRICE → calculates revenue per order line.
+- SUM(...) → adds all values to get total revenue.
+
 
 ➤ **Insight**:
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/3.png)
