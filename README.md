@@ -27,9 +27,11 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - Orders distribution by hour
 - Average pizzas ordered per day 
 ## 📈 SQL Queries & Insights:
-➤ **Insight**:
+➤ **Insight**:The total order count highlights customer purchasing activity and can be used to identify business growth patterns when analyzed over time. It also helps in correlating order volume with revenue and operational capacity.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/1.png)
-➤ **Explanation**:
+➤ **Explanation**:This query counts the total number of orders recorded in the ORDERS table using ORDER_ID.
+- COUNT(ORDER_ID) counts all non-null order IDs
+- Since each ORDER_ID represents one order, the result gives the total orders placed
 
 ➤ **Insight**:
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/2.png)
