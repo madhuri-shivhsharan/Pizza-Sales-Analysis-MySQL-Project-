@@ -27,7 +27,7 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - Orders distribution by hour
 - Average pizzas ordered per day 
 ## 📈 SQL Queries & Insights:
-<img src="1.png" width="800">
+[<img src="1.png" width="800">](https://i.postimg.cc/VLqrqM2h/1.png)
 ---
 
 
