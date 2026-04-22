@@ -44,9 +44,17 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - SUM(...) → adds all values to get total revenue.
 
 
-➤ **Insight**:
+➤ **Insight**:The highest priced pizza represents the premium offering in the menu, highlighting the top-end pricing strategy of the business.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/3.png)
-➤ **Explanation**:
+➤ **Explanation**:This analysis is done in two steps:
+1. Find the maximum price.
+- MAX(PRICE) returns the highest pizza price in the dataset.
+2. Retrieve full details.
+- Join PIZZAS with PIZZA_TYPES to get the pizza name.
+- Sort prices in descending order (ORDER BY P.PRICE DESC).
+- LIMIT 1 returns the most expensive pizza with:Name,Size,Price.
+  
+
 
 ➤ **Insight**:
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/4.png)
