@@ -27,11 +27,11 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - Orders distribution by hour
 - Average pizzas ordered per day 
 ## 📈 SQL Queries & Insights:
-[<img src="1.png" width="800">](https://i.postimg.cc/VLqrqM2h/1.png)
----
+(https://i.postimg.cc/VLqrqM2h/1.png)
+exp1
 
-
-
+https://i.postimg.cc/ZK5tHzM2/2.png
+exp2
 ## 🚀 Conclusion
 I found that revenue is highly concentrated in a few pizza types. Medium and large pizzas dominate sales, and evening hours are peak order times. Also, top 3 pizzas in each category generate most revenue, which suggests focusing on high-performing items can significantly improve business outcomes.
 
