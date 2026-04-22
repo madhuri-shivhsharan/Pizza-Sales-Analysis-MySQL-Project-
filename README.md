@@ -63,7 +63,7 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - COUNT(*) → counts how many times each size was ordered.
 - ORDER BY TOTAL_ORDERS DESC → sorts sizes from most to least ordered.
 - LIMIT 1 → returns the top (most ordered) size.
- It counts orders for each size and returns the size with the highest demand.
+- It counts orders for each size and returns the size with the highest demand.
 
 ➤ **Insight**:The top 5 most ordered pizza types highlight the most popular products, reflecting customer preferences and demand trends.
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/5.png)
@@ -76,7 +76,7 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - GROUP BY PT.NAME → groups results by pizza type.
 - ORDER BY TOTAL_QUANTITY DESC → sorts from highest to lowest demand.
 - LIMIT 5 → returns top 5 pizza types.
-  It finds which pizzas are sold the most in terms of total quantity.
+- It finds which pizzas are sold the most in terms of total quantity.
 
 ➤ **Insight**:
 ![Pizza Sales Analysis](https://raw.githubusercontent.com/madhuri-shivhsharan/Pizza-Sales-Analysis-MySQL-Project-/refs/heads/assets/6.png)
