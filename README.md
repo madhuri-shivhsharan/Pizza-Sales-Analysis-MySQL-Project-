@@ -10,9 +10,11 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 - Study sales trends over time.
 
 ## 🗂️ Dataset Includes 4 Tables:
-- Orders,Order_Details,Pizzas ,Pizza_Types.
-- In Orders table contain 
-
+- Orders,Order_Details,Pizzas,Pizza_Types.
+- In Orders table contains Order id,Customer id,Order date,amount.
+- In Orders_details table conatains Order_details_id,Order_id,Pizza_id,Quantity.
+- In Pizzas table contains Pizza_id,Pizza_type_id,Size,Price.
+- In Pizzas_types table conatins Pizza_type_id,Name,Category,Ingredients.
 ## 📊 Key Analysis Performed
 
 ### 🔹 Basic Analysis
@@ -25,13 +27,8 @@ This project analyzes pizza sales data using MySQL to uncover business insights 
 ### 🔹 Intermediate Analysis
 - Category-wise sales distribution
 - Orders distribution by hour
-- Average pizzas ordered per day
-
-
-
----
-
-## 📈 Insights
+- Average pizzas ordered per day 
+## 📈 SQL Queries & Insights
 (See insights section below 👇)
 
 ---
